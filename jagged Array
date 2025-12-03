@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Declare a jagged array with 3 rows
+        int[][] jaggedArray = new int[3][];
+
+        // Initialize each row with different lengths
+        jaggedArray[0] = new int[] { 10, 20 };
+        jaggedArray[1] = new int[] { 30, 40, 50 };
+        jaggedArray[2] = new int[] { 60, 70, 80, 90 };
+
+        // Display jagged array
+        Console.WriteLine("Jagged Array Elements:");
+        for (int i = 0; i < jaggedArray.Length; i++)
+        {
+            Console.Write("Row " + i + ": ");
+            for (int j = 0; j < jaggedArray[i].Length; j++)
+            {
+                Console.Write(jaggedArray[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        Console.ReadLine();
+    }
+}
