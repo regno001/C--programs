@@ -1,0 +1,43 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the Number of Rows of the Array");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the Number of Columns of the Array");
+        int b = int.Parse(Console.ReadLine());
+
+        int[][] arr = new int[a][];
+
+        // Initialize each row
+        for (int i = 0; i < a; i++)
+        {
+            arr[i] = new int[b];
+        }
+
+        // Take input for each element
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < b; j++)        // <-- j < b (not j < a)
+            {
+                Console.Write("Row " + i + " Column " + j + ": ");
+                arr[i][j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Print the array (outside the input loops)
+        Console.WriteLine("\nThe Array is:");
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < b; j++)
+            {
+                Console.Write(arr[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+ 
